@@ -5,6 +5,7 @@ public class ParameterizedConstructor {
 	String name;
 	public ParameterizedConstructor(int age1,String name1)
 	{
+		int a;
 		age=age1;
 		name=name1;
 		System.out.println("Student details from Goverment Higher secondary School");
