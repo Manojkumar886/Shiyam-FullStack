@@ -4,22 +4,22 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class LinearSearch {
-	public static int linearsearch(int [] arr,int key)
+	public static int linearsearch(int as[],int key)
 	{
-		for(int i=0;i<arr.length;i++)
+		for(int i=0;i<as.length;i++)
 		{
-			if(arr[i]==key)
+			if(as[i]==key)
 			{
 				return i;
-			}
+			}	
 		}
-		return key;
+		return -1;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] a= {10,290,30,40,50,60};
-		Arrays.sort(a);
+		int[] a= {10,290,300,40,50,60};
+//		Arrays.sort(a);
 		Scanner scan=new Scanner(System.in);
 		System.out.println(Arrays.toString(a));
 		System.out.println("which number in found at index");

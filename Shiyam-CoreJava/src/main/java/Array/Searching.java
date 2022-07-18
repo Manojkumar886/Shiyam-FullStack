@@ -8,6 +8,7 @@ public class Searching {
 		// TODO Auto-generated method stub
 		String[] cast= {"Dweyne","Evans","Robert","Hemsworth","Holland","Pratt","Ruffalo","Hiddlwson","Jhonson"};
 		Scanner scan=new Scanner(System.in);
+		System.out.println(cast.length);
 		
 		System.out.println("Tell us your favorit actor: ");
 		String favor=scan.next();
@@ -23,8 +24,7 @@ public class Searching {
 		
 		System.out.println(favor+" actor not found anywhere");
 		
-		scan.close();
-
+		//scan.close();
 	}
 
 }

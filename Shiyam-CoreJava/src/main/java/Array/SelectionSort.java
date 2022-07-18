@@ -9,7 +9,7 @@ public class SelectionSort {
 		{
 			for(int com=0;com<arr.length;com++)
 			{
-				if(arr[select]>arr[com])
+				if(arr[select]<arr[com])
 				{
 					arr[select]^=arr[com];
 					arr[com]^=arr[select];

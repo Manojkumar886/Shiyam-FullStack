@@ -20,7 +20,7 @@ public class BinarySearch {
 				return mid;
 			else if(say[mid]>users)
 				return search(say, start, mid, users);
-			else
+				
 				return search(say, mid+1, end, users);
 		}
 		return -1;
