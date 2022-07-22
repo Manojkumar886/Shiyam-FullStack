@@ -15,7 +15,7 @@ public class BinarySearch {
 	{
 		if(end>start)
 		{
-			int mid=(end+start)/2;
+			int mid=(end)/2;
 			if(say[mid]==users)
 				return mid;
 			else if(say[mid]>users)
