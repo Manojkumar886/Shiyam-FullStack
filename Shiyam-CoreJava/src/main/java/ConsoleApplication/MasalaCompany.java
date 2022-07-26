@@ -16,6 +16,7 @@ public class MasalaCompany  implements MasalaAgencyActions
 		agency[5]=new MasalaAgency("AachiMasala", "PepperPowder", 90, "100g");
 		agency[6]=new MasalaAgency("AachiMasala", "PepperPowder", 90, "100g");
 		agency[7]=new MasalaAgency("AachiMasala", "PepperPowder", 90, "100g");
+		agency[8]=new MasalaAgency("selvamMasala", "ChillyPowder", 567, "5kg");
 		
 	}
 	public static void main(String[] args) 
@@ -24,6 +25,12 @@ public class MasalaCompany  implements MasalaAgencyActions
 		MasalaCompany obj=new MasalaCompany();
 		obj.ListAllProduct();
 		obj.AddnewProductName(agency1);
+//		obj.ListAllProduct();
+//		obj.DeleteProduct("aachimasala");
+//		obj.ListAllProduct();
+//		obj.DeleteProduct("aachimasala");
+//		obj.ListAllProduct();
+		obj.UpdateProduct("SakthiMasala");
 		obj.ListAllProduct();
 	
 				
@@ -60,7 +67,17 @@ public class MasalaCompany  implements MasalaAgencyActions
 	@Override
 	public void DeleteProduct(String name) {
 		// TODO Auto-generated method stub
-		
+		for (int index=0;index<agency.length;index++)
+		{
+			if
+			(agency[index].getProductName().equalsIgnoreCase(name))
+			{
+				agency[index]=null;
+				System.out.println(name+"has deleted Successfully");
+				return;
+			}
+		}
+		System.out.println(name+"has not foundAnywhere");
 	}
 
 	@Override
@@ -81,9 +98,35 @@ public class MasalaCompany  implements MasalaAgencyActions
 		
 	}
 
-	@Override
-	public void UpdateProduct() {
+	public void UpdateProduct(String name) {
 		// TODO Auto-generated method stub
+		for (int index=0;index<agency.length;index++)
+		{
+			if(agency[index].getProductName().equalsIgnoreCase(name))
+			{
+				System.out.println(agency[index]);
+				System.out.println("tell us what to update");
+				String update=scan.nextLine();
+				switch(update)
+				{
+				case "ProductName":
+					System.out.println("tell us a new Productname");
+					String name1=scan.nextLine();
+					agency[index].setProductName(name1);
+					break;
+				case "Quantity":
+					System.out.println("tell us a new Quantity ");
+					String name2=scan.nextLine();
+					agency[index].setQuantity(name2);
+					break;
+					default:System.out.println("Nothing to update");
+					
+					
+				
+				}
+				
+			}
+		}
 		
 	}
 	

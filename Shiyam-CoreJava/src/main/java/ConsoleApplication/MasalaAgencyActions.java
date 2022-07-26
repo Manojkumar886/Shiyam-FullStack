@@ -9,6 +9,6 @@ public interface MasalaAgencyActions
 	public void SearchProduct(String name);
 	public void SearchProduct(int itemrate);
 	public void SortProduct();
-	public void UpdateProduct();
+	public void UpdateProduct(String name);
 
 }
