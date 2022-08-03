@@ -30,9 +30,14 @@ public class MasalaCompany  implements MasalaAgencyActions
 //		obj.ListAllProduct();
 //		obj.DeleteProduct("aachimasala");
 //		obj.ListAllProduct();
-		obj.UpdateProduct("SakthiMasala");
+//		obj.UpdateProduct("SakthiMasala");
+//		obj.ListAllProduct();
+//		obj.SortProduct();
+//		obj.ListAllProduct();
+		obj.SearchProduct("SakthiMasala");
+		obj.SortProduct();
 		obj.ListAllProduct();
-	
+		
 				
 	}
 
@@ -83,6 +88,15 @@ public class MasalaCompany  implements MasalaAgencyActions
 	@Override
 	public void SearchProduct(String name) {
 		// TODO Auto-generated method stub
+		System.out.println("Trying to fetch masala matching the Productname "+name);
+
+		for(int index=0;index<agency.length;index++)
+		{
+			if(agency[index].getProductName().equalsIgnoreCase(name))
+			{
+				System.out.println(agency[index]);
+			}
+		}
 		
 	}
 
@@ -95,6 +109,33 @@ public class MasalaCompany  implements MasalaAgencyActions
 	@Override
 	public void SortProduct() {
 		// TODO Auto-generated method stub
+		MasalaAgency masala=null;
+		System.out.println("Based on what you wish to sort");
+		String what=scan.next();
+		for(int index=0;index<agency.length;index++)
+		{
+			for(int com=index+1;com<agency.length;com++)
+			{
+				if(what.equalsIgnoreCase("name"))
+				{
+					if(agency[index].getProductName().compareTo(agency[com].getProductName())>0)
+					{
+						masala=agency[index];
+						agency[index]=agency[com];
+						agency[com]=masala;
+					}
+				}
+				else if(what.equalsIgnoreCase("name"))
+				{
+					if(agency[index].getItemName().compareTo(agency[com].getItemName())>0)
+					{
+						masala=agency[index];
+						agency[index]=agency[com];
+						agency[com]=masala;
+					}
+				}
+			}
+		}
 		
 	}
 
