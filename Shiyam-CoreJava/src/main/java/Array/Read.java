@@ -16,11 +16,16 @@ public class Read {
 		System.out.println("Tell us desired value to read based on that ");
 		double tmp=scan.nextDouble();
 
-		for(int index=0;index<kiran.length;index++) {
-				if(kiran[index]<=tmp)
-				System.out.println(kiran[index]);
-		}
-
+		for(int index=0;index<kiran.length;index++) 
+		{
+				if(kiran[index]==tmp)
+				{
+				System.out.println(kiran[index]+"-pos is   "+index);
+				}
+				else
+				{
+					System.out.println(tmp+"This value is not founded by kiran");
+				}
+		}				
 	}
-
 }

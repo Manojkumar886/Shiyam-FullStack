@@ -7,8 +7,8 @@ public class PassingAnArraytoMethods {
 	public void passing(double[]arr)
 	{
 		System.out.println(Arrays.toString(arr));
-		arr[2]=23.3;
-		System.out.println(Arrays.toString(arr));
+//		arr[2]=23.3;
+//		System.out.println(Arrays.toString(arr));
 		
 	}
 
