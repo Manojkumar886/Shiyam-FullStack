@@ -10,9 +10,9 @@ public class BubbleSort {
 			for(int j=0;j<a-i-1;j++)
 				if(hey[j]>hey[j+1])
 				{
-					int temp=hey[j];
-					hey[j]=hey[j+1];
-					hey[j+1]=temp;
+					int temp=hey[j];//temp=6
+					hey[j]=hey[j+1];//6=5
+					hey[j+1]=temp;//5=6;
 				}
 		
 	}

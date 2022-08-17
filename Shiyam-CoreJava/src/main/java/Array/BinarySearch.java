@@ -33,7 +33,7 @@ public class BinarySearch {
 		System.out.println(Arrays.toString(hai));
 		BinarySearch binary=new BinarySearch();
 		binary.traverse(hai);
-		System.out.println("That index  is"+binary.search(hai,0,hai.length,7.4));
+		System.out.println("That index  is"+binary.search(hai,0,hai.length,4.8));
 
 	}
 
